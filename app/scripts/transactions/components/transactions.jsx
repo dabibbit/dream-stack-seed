@@ -33,7 +33,7 @@ var Transactions = React.createClass({
   mixins: [CurrentPath],
 
   getInitialState: function() {
-    return { transactions: []};
+    return { transactions: collection};
   },
 
   componentDidMount: function() {
@@ -57,9 +57,6 @@ var Transactions = React.createClass({
   },
 
   render: function() {
-
-    console.log("render called");
-
     var transactionItems = this.state.transactions.map(function(model) {
       var id = model.get('id');
 

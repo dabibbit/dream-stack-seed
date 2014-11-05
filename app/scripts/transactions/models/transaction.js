@@ -104,7 +104,7 @@ var Transaction = Backbone.Model.extend({
     });
 
     if (!isValid) {
-      //return 'There is an error';
+      return 'There is an error';
     }
   }
 });
