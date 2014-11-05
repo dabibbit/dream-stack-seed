@@ -20,7 +20,7 @@ var attemptSessionRestoration = function() {
 };
 
 var topBarConfig = {
-  brandName: "Gatewayd Basic",
+  brandName: "Gold on Ripple",
   wrapperClass: "top-bar container-fluid",
   links: [
     {
@@ -37,7 +37,7 @@ var App =
     render:function(){
       if (!session.get('lastLogin')) {
         attemptSessionRestoration();
-        redirectToLogin.call(this);
+        //redirectToLogin.call(this);
       }
 
       return (

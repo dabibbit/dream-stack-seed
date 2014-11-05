@@ -1,0 +1,8 @@
+{
+  "actions": {
+    "fetchBuyQuote": "fetchBuyQuote",
+    "fetchSellQuote": "fetchSellQuote",
+    "buy": "buy",
+    "sell": "sell"
+  }
+}

@@ -9,7 +9,7 @@ var NotFoundRoute = Router.NotFoundRoute;
 
 var NotFound = require('./not-found/not-found.jsx');
 
-var Payments = require('../payments/components/payments.jsx');
+var Transactions = require('../transactions/components/transactions.jsx');
 var LoginForm = require('../session/components/login-form.jsx');
 var Session = require('../session/components/session.jsx');
 
@@ -21,15 +21,15 @@ var App = require('./app.jsx');
 var routes = (
   <Routes>
     <Route name="app" path="/" handler={App}>
-      <DefaultRoute handler={Payments} />
+      <DefaultRoute handler={Transactions} />
       <Route name="login" handler={Session} />
       <Route name="logout" handler={Session} />
-      <Route name="payments" handler={Payments}>
-        <Route name="incoming" path="incoming" handler={Payments} />
-        <Route name="outgoing" path="outgoing" handler={Payments} />
-        <Route name="completed" path="completed" handler={Payments} />
-        <Route name="failed" path="failed" handler={Payments} />
-        <Route name="new" path="new" handler={Payments} />
+      <Route name="payments" handler={Transactions}>
+        <Route name="incoming" path="incoming" handler={Transactions} />
+        <Route name="outgoing" path="outgoing" handler={Transactions} />
+        <Route name="completed" path="completed" handler={Transactions} />
+        <Route name="failed" path="failed" handler={Transactions} />
+        <Route name="new" path="new" handler={Transactions} />
       </Route>
       <Route name="notFound" handler={NotFound} />
       <NotFoundRoute handler={NotFound} />
