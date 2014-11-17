@@ -2,10 +2,11 @@
 
 var React = require('react');
 var routes = require('./components/router.jsx');
-var Bots = require('./modules/bots/components/bots.jsx');
 
-var bots = new Bots();
+var App = require('./components/app.jsx');
 
-React.renderComponent(bots, document.getElementById('content-main'));
+var app = new App();
+
+React.renderComponent(app, document.getElementById('content-main'));
 //React.renderComponent(routes, document.getElementById('content-main'));
 
