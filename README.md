@@ -1,5 +1,4 @@
 dream-stack-seed
-====================
 
 ## Usage
 

@@ -26,3 +26,8 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+node_modules/
+app/libs/
+npm-debug.log
+app/scripts/npm-debug.log
+dist/
