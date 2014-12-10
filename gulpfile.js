@@ -8,6 +8,8 @@ var del = require('del');
 var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 
+var to5Browserify = require("6to5-browserify");
+
 //server
 var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
@@ -56,6 +58,7 @@ gulp.task('js', ['clean'], function() {
 
   // Browserify/bundle the JS.
   browserify(paths.main_js)
+    .transform(to5Browserify)
     .transform(reactify)
     .bundle()
     .pipe(source('bundle.js'))
